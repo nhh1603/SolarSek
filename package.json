@@ -1,0 +1,34 @@
+{
+  "name": "very-testy",
+  "server": {
+    "host": true
+  },
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.9.0"
+  },
+  "dependencies": {
+    "dat.gui": "^0.7.9",
+    "gsap": "^3.10.2",
+    "three": "^0.139.2"
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khai2002/Solar-Sek.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khai2002/Solar-Sek/issues"
+  },
+  "homepage": "https://github.com/Khai2002/Solar-Sek#readme"
+}

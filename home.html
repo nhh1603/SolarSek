@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body>
+    <script type="module" src="./src/home.js"></script>
+    <div class="cursor"></div>
+    <script>
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: "+(e.clientY - 10)+"px; left: "+(e.clientX - 10)+"px;")
+        })
+
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
+    </script>
+
+</body>
+</html>

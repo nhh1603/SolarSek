@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="res/favicon.svg" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,700&family=Space+Mono&display=swap" rel="stylesheet">
+    <!--
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    target="_blank"
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <style>
+      body{
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      #app, #text {
+        width: 100vw;
+      }
+
+      .font-exo {
+        font-family: 'Exo 2', sans-serif;
+      }
+
+      .font-space-mono {
+        font-family: 'Space Mono', monospace;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="text" class="absolute text-white text-center" style="top: 50%; transform: translate(-50%, -50%); left: 50%;">
+        <h1 class="font-space-mono text-xl" style="text-transform: uppercase">Solar Sek</h1>
+        <p class="font-exo text-5xl" style="text-transform: uppercase">Let There Be Light</p>
+        <div id="flex-box">
+          <a href="conception.html" class="font-space-mono border px-4 py-2 rounded-lg text-sm mt-4 hover:bg-white hover:text-gray-800 inline-block" style="text-transform: uppercase">Conception</a>
+          <a href="home.html" class="font-space-mono border px-4 py-2 rounded-lg text-sm mt-4 hover:bg-white hover:text-gray-800 inline-block" style="text-transform: uppercase">View Project</a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="font-space-mono border px-4 py-2 rounded-lg text-sm mt-4 hover:bg-white hover:text-gray-800 inline-block" style="text-transform: uppercase">About</a>
+        </div>
+
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+    <div class="cursor"></div>
+    <script>
+      const cursor = document.querySelector('.cursor');
+
+      document.addEventListener('mousemove', e => {
+        cursor.setAttribute("style", "top: "+(e.clientY - 10)+"px; left: "+(e.clientX - 10)+"px;")
+      })
+
+      document.addEventListener('click', () => {
+        cursor.classList.add("expand");
+
+        setTimeout(() => {
+          cursor.classList.remove("expand");
+        }, 500)
+      })
+    </script>
+  </body>
+</html>
